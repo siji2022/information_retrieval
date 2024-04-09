@@ -1,0 +1,11 @@
+# install https://huggingface.co/docs/transformers/en/installation
+pip install transformers
+# test install
+python -c "from transformers import pipeline; print(pipeline('sentiment-analysis')('we love you'))"
+
+# change cache location, use or source ~/.bashrc
+export TRANSFORMERS_CACHE=/mnt/d1/siji/.cache/huggingface/hub
+
+
+# other install
+pip install datasets evaluate transformers[sentencepiece]

@@ -1,0 +1,61 @@
+
+Collecting usage statistics. To deactivate, set browser.gatherUsageStats to false.
+
+
+  You can now view your Streamlit app in your browser.
+
+  Network URL: http://45.3.96.210:8501
+  External URL: http://45.3.96.210:8501
+
+Matplotlib created a temporary cache directory at /tmp/matplotlib-3b7jb3zg because the default path (/home/sijic/.cache/matplotlib) is not a writable directory; it is highly recommended to set the MPLCONFIGDIR environment variable to a writable directory, in particular to speed up the import of Matplotlib and to better support multiprocessing.
+2024-04-17 23:20:35.896 Uncaught app exception
+Traceback (most recent call last):
+  File "/home/sijic/.local/lib/python3.9/site-packages/streamlit/runtime/scriptrunner/script_runner.py", line 584, in _run_script
+    exec(code, module.__dict__)
+  File "/mnt/d1/siji/projects/IR/ui/safety_at_location_ir.py", line 92, in <module>
+    ax = sns.jointplot(x=df['longitude'], y=df['latitude'], kind='hex', gridsize=30,
+  File "/home/siji/anaconda3/envs/gnn/lib/python3.9/site-packages/seaborn/axisgrid.py", line 2313, in jointplot
+    grid.plot_joint(plt.hexbin, **joint_kws)
+  File "/home/siji/anaconda3/envs/gnn/lib/python3.9/site-packages/seaborn/axisgrid.py", line 1834, in plot_joint
+    func(self.x, self.y, **kwargs)
+  File "/home/siji/anaconda3/envs/gnn/lib/python3.9/site-packages/matplotlib/pyplot.py", line 3194, in hexbin
+    sci(__ret)
+  File "/home/siji/anaconda3/envs/gnn/lib/python3.9/site-packages/matplotlib/pyplot.py", line 4111, in sci
+    gca()._sci(im)
+  File "/home/siji/anaconda3/envs/gnn/lib/python3.9/site-packages/matplotlib/axes/_base.py", line 2191, in _sci
+    raise ValueError("Argument must be an image or collection in this Axes")
+ValueError: Argument must be an image or collection in this Axes
+2024-04-18 14:20:27.655 Uncaught app exception
+Traceback (most recent call last):
+  File "/home/sijic/.local/lib/python3.9/site-packages/streamlit/runtime/scriptrunner/script_runner.py", line 584, in _run_script
+    exec(code, module.__dict__)
+  File "/mnt/d1/siji/projects/IR/ui/safety_at_location_ir.py", line 92, in <module>
+    ax = sns.jointplot(x=df['longitude'], y=df['latitude'], kind='hex', gridsize=30,
+  File "/home/siji/anaconda3/envs/gnn/lib/python3.9/site-packages/seaborn/axisgrid.py", line 2313, in jointplot
+    grid.plot_joint(plt.hexbin, **joint_kws)
+  File "/home/siji/anaconda3/envs/gnn/lib/python3.9/site-packages/seaborn/axisgrid.py", line 1834, in plot_joint
+    func(self.x, self.y, **kwargs)
+  File "/home/siji/anaconda3/envs/gnn/lib/python3.9/site-packages/matplotlib/pyplot.py", line 3194, in hexbin
+    sci(__ret)
+  File "/home/siji/anaconda3/envs/gnn/lib/python3.9/site-packages/matplotlib/pyplot.py", line 4111, in sci
+    gca()._sci(im)
+  File "/home/siji/anaconda3/envs/gnn/lib/python3.9/site-packages/matplotlib/axes/_base.py", line 2191, in _sci
+    raise ValueError("Argument must be an image or collection in this Axes")
+ValueError: Argument must be an image or collection in this Axes
+2024-04-18 14:31:07.824 Uncaught app exception
+Traceback (most recent call last):
+  File "/home/sijic/.local/lib/python3.9/site-packages/streamlit/runtime/scriptrunner/script_runner.py", line 584, in _run_script
+    exec(code, module.__dict__)
+  File "/mnt/d1/siji/projects/IR/ui/safety_at_location_ir.py", line 92, in <module>
+    ax = sns.jointplot(x=df['longitude'], y=df['latitude'], kind='hex', gridsize=30,
+  File "/home/siji/anaconda3/envs/gnn/lib/python3.9/site-packages/seaborn/axisgrid.py", line 2313, in jointplot
+    grid.plot_joint(plt.hexbin, **joint_kws)
+  File "/home/siji/anaconda3/envs/gnn/lib/python3.9/site-packages/seaborn/axisgrid.py", line 1834, in plot_joint
+    func(self.x, self.y, **kwargs)
+  File "/home/siji/anaconda3/envs/gnn/lib/python3.9/site-packages/matplotlib/pyplot.py", line 3194, in hexbin
+    sci(__ret)
+  File "/home/siji/anaconda3/envs/gnn/lib/python3.9/site-packages/matplotlib/pyplot.py", line 4111, in sci
+    gca()._sci(im)
+  File "/home/siji/anaconda3/envs/gnn/lib/python3.9/site-packages/matplotlib/axes/_base.py", line 2191, in _sci
+    raise ValueError("Argument must be an image or collection in this Axes")
+ValueError: Argument must be an image or collection in this Axes

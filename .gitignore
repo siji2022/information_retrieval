@@ -1,3 +1,5 @@
 .ipynb_checkpoints
-/data*
+/data/dc-maps*
+/data/washington-post*
+# /data/
 nohub.out

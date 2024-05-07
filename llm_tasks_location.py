@@ -40,10 +40,10 @@ model='facebook/bart-large-cnn' # bad
 # model='openai-community/gpt2' # not working
 model='google/flan-t5-base' # ok
 model='google/flan-t5-large' 
-# model='tiiuae/falcon-7b' # not working
-# model='starmpcc/Asclepius-Llama2-7B' # not working
+model='tiiuae/falcon-7b' # not working for t2t
+model='starmpcc/Asclepius-Llama2-7B' # not working for t2t
 # model='meta-llama/Llama-2-7b-hf' # can't access
-pipe = pipeline("text2text-generation", device=1,  model=model, truncation=False,max_new_tokens=10)
+pipe = pipeline("text2text-generation", device=1,  model=model, truncation=False,max_new_tokens=10, torch_dtype=torch.float16)
 
 
 
@@ -74,8 +74,8 @@ try:
             # clean the cuda memory
             torch.cuda.empty_cache()
         id=id+1
-        # if id>10:
-        #     break
+        if id>1:
+            break
 except:
     pass
 # save results as csv

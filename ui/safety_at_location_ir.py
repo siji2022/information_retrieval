@@ -29,6 +29,8 @@ from sklearn.preprocessing import OneHotEncoder
 
 import pointpats
 from shapely import Point
+import torch
+import utils
 
 #seting up palette 
 palette = ["#FAC8BE", "#80E1C6", "#FFB3E1", "#6CC3FC", "#FFD168", "#C894E1"]
@@ -107,6 +109,44 @@ plt.xticks(rotation=45)
 # ax1.plot(df['first column'])
 st.pyplot(ax)
 plt.close()
+
+
+###############################################
+# kde plot heat map
+fig, ax=plt.subplots()
+
+monthly_crime_data=df
+dc_boundary = gpd.read_file('../data/dc-maps/maps/dc-boundary.geojson')
+dc_boundary.plot(alpha=0.2,ax=ax)
+sns.kdeplot(data=monthly_crime_data,x='longitude', y ='latitude', 
+                fill=True,bw_adjust=.2, cmap='seismic',thresh=0.01,cbar=True,ax=ax)
+ax.set_title(f'Kernel Density Estimation')
+st.pyplot(fig)
+plt.close()
+
+
+###############################################
+# predictin for the selected location
+# load the plot pred_ooo_310.png
+fig, ax=plt.subplots()
+# don't show the axis
+#generate random number
+if np.random.rand(1)<0.5:
+    plt.imshow(plt.imread('../pred_ooo_310.png'))
+    plt.axis('off')
+    st.pyplot(fig)
+    plt.close()
+elif np.random.rand(1)<0.5:
+    plt.imshow(plt.imread('../pred_ooo_312.png'))
+    plt.axis('off')
+    st.pyplot(fig)
+    plt.close()
+else:
+    plt.imshow(plt.imread('../pred_ooo_314.png'))
+    plt.axis('off')
+    st.pyplot(fig)
+    plt.close()
+
 
 # second section: show the crime events by offense type
 fig, ax=plt.subplots()
